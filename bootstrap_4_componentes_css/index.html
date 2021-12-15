@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"><!-- codificação de caracteres a ser usado -->
+    <meta name="viewport" content="width=device-widht, initial-scale=1, shrink-to-fit=no">
+    <!-- viewport = pagina, janela de exibi~]ao, parte visivel da page.
+        width=device-width é a largura da minha page, initial-scale é pra a page nao exibir com zoom inicialmente. shrink-to-fit=no é pra criar uma barra de rolagem caso o conteudo nao caiba na tela-->
+    <title>Bootstrap componentes CSS</title>
+    <!-- Abaixo teremos nossa cdn do css adquirida no boostrap.com -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link />
+<style>
+    div.jumbotron{
+        margin-top: 150px;
+    }
+    input.abc{
+        margin-left: 540px;
+        margin-top: 25px;
+    }
+    div.def{
+        margin-top: 10px;
+    }
+     button.ghi{
+        margin-left: 444px;
+        margin-top: -66px;
+     }
+</style>
+  
+  <!--   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link />-->
+</head>
+
+<body>
+    <!-- criando um menu (nav) -->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" > <!-- navbar-expand é aquele trÊs pontinhos para abrir o menu.
+    e as outras classes seguidas de light é pra configurar como claro  ou dark como escuro e fixed é pra deixar o menu em cima ou embaixo (fixed-top ou fixed-boron)-->
+        <a class="navbar-brand" href="#"><!-- navbar-brand, redireciona o usuario para a home quando clicar no logotipo da page -->
+            <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30"
+                class="d-inline-block align-top"><!-- minha classe é meu helper -->
+            TreinaWeb - Bootstrap
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudo-navbar"
+        aria-controls="conteudo-navbar" aria-expanded="false" aria-label="Botão para expansão do menu">
+            <span class="navbar-toggler-icon"></span><!-- crindo meu menu hamburguer -->
+        </button>
+      <!-- explicando os datas acima: data-toggle = alternar dados para colapçado. data-target =
+          é o conteudo da div abaixo que tem que ser expandido quando estiver colapsado e esse button abaixo estiver sendo exibido-->
+        <div class="collapse navbar-collapse" id="conteudo-navbar"><!-- collapse é uma classe que pode sumir dentro de um breakpoint -->
+            <ul class="navbar-nav mr-auto"><!-- nav depois do navbar indica que é um elemento de navegação -->
+                <li class="nav-item"><!-- nav-item = item de navegação. # indica que é um link -->
+                   <a class="nav-link" href="#">Home</a><!-- primeiro item do menu -->
+                </li>
+                <li class="nav-item"><!-- nav-item = item de navegação. # indica que é um link -->
+                    <a class="nav-link" href="#">Sair</a><!-- segundo item do menu -->
+                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-dropdown" role="button"
+                    data-toggle="dropdown"><!--data-toggle="dropdown" = estou especificando o tipo da toggle. dropdown-toggle = indica um setinha pra baixo na barra de menu
+                    e role="button" significa que vai se comportar como um botão, vai ter outras opções abaixo que ai sim serão links  -->
+                        Cadastros <!-- terceiro item do meu menu  -->
+                    </a>
+                    <div class="dropdown-menu"><!-- aqui ficara as possibilidades de direcionamento do meu dropdown acima  -->
+                        <a href="#" class="dropdown-item">Clientes</a>
+                        <a href="#" class="dropdown-item">Fornecedores</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Usuários</a>
+                    </div>
+                </li>
+                <li class="nav-item"> 
+                    <a href="#" class="nav-link disabled">Configurações</a>
+                </li> 
+            </ul>
+            <form class="form-inline my-2"> 
+                <!-- form-inline coloca um atributo do lado do outro -->
+                 <!-- my-2 = margem do eixo y e o 2 divide o espaço padrão do space definido-->
+                <input class="form-control abc" type="search" placeholder="Pesquisa..."> <!-- placeholder é aquelas palavras em cinza claro 
+                    que ficam dentro da brra de pesquisa e somem logo que começamos a escrever algo -->
+                <button class="btn btn-outline-success ml-2 ghi" type="submit"> <!-- sucess define a borda do botão de verde -->
+                    Pesquisar
+                </button>
+            </form>
+        </div>
+</nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="dispaly-4">Hello, World!</h1>
+        <p class="lead">Essa pagina faz muitas coisas!</p>
+        <hr class="mr-4">
+        <p>Essa aplicação usa o bootstrap 4</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Aprender mais!</a>
+    </div>
+    <div class="card def">
+        <div class="card-header"><!-- cabeçalho do meu card -->
+           <h5>Atenção!</h5> 
+        </div>
+        <div class="card-body"><!-- corpo do meu card -->
+            <p>asdfghjk</p>
+        </div>
+    </div>
+    <div class="card mb-3">
+        <img src="http://primazzo.com.br/content/2018/09/cadastro-de-clientes-imagem4-large.jpg"
+        class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Cadastro de clientes</h5>
+            <p class="card-text">Aqui você pode cadastrar clientes...</p>
+            <a href="#" class="btn btn-primary">Clique aqui!</a>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6 col-sm-12">
+                <label class="col-form-label col-form-label-lg">E-mail:</label>
+                <input type="email" class="form-control form-control-lg"><!-- criando minha primeira linha de formulario -->
+            </div>
+            <div class="form-group col-md-6 col-sm-12">
+                <label class="col-form-label col-form-label-lg">Senha:</label>
+                <input type="password" class="form-control form-control-lg"><!-- criando minha primeira linha de formulario -->
+            </div>
+         </div>
+            <div class="form-row">
+                <div class="form-group col-md-6 col-sm-12">
+                <label class="col-form-label">Estado:</label>
+                <select class="form-control">
+                    <option>São Paulo</option>
+                    <option>Rio de Janeiro</option>
+                    <option>Minas Gerais</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+</div>
+<!--  -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+       <!--  <script src="http://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRZzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/ums/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy60rQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>-->
+</body>
+
+</html>
